@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: mysql-project-quota
+  namespace: mysql-project
+spec:
+  hard:
+    pods: "10"
+    services: "5"
+    persistentvolumeclaims: "4"
+    requests.cpu: "2"
+    requests.memory: 2Gi
+    limits.cpu: "4"
+    limits.memory: 4Gi
+    requests.storage: 5Gi
